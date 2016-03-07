@@ -2,10 +2,11 @@
   "name": "wepo-assignment-3",
   "version": "1.0.0",
   "authors": [
-    "Daníel Sigurgeirsson <danielbsig@gmail.com>"
+    "Daníel Sigurgeirsson <danielbsig@gmail.com> & Stinni <kristinnf13@ru.is> & Sturla <sturlah13@ru.is>"
   ],
   "main": "src/app.js",
   "license": "MIT",
+  "homepage": "https://github.com/Stinni/WEPO_SKV2",
   "ignore": [
     "**/.*",
     "node_modules",
