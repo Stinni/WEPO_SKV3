@@ -1,8 +1,7 @@
 {
-	"sellers" : {
+	"sellersdetails" : {
 		"Title":                     "Seljendur",
-		"Name":     		 		"Nafn",
-		"Category":					"Flokkur",
+		"Name":                      "Nafn",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",

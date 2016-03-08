@@ -1,1 +1,27 @@
-<div> Hér ætti að birtast listi af seljendum - TODO: útfæra það!</div>
+<!--<div ng-show="isLoading">
+<loading-message></loading-message>
+</div>
+
+<div ng-hide="isLoading">
+-->
+	<button class="btn btn-default" ng-click="onAddSeller()">Add seller
+		
+		<!--<span translate="sellers.Add"/>-->
+	</button>
+	
+	<table><!--
+		<thead>
+			<tr>
+				<th translate="sellers.Name"></th>
+				<th translate="sellers.Category"></th>
+			</tr>
+		</thead>-->
+
+		<tbody> 
+		<tr ng-repeat="seller in sellers track by $index">
+			<td>{{seller.name}}</td> 
+			<td>{{seller.category}}</td>
+		</tr>
+		</tbody>
+	</table>
+<!--</div>-->

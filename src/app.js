@@ -6,4 +6,5 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices"])
 		controller: "SellersController",
 		templateUrl: "components/sellers/index.html"
 	});
+	//$translateProvider.use('is');
 });
