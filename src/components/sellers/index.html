@@ -4,7 +4,7 @@
 
 <div ng-hide="isLoading">
 -->
-	<button class="btn btn-default" ng-click="onAddSeller()">Add seller
+	<button class="btn btn-default" ng-click="onAddSeller()">add/update seller
 		
 		<!--<span translate="sellers.Add"/>-->
 	</button>
@@ -18,7 +18,7 @@
 		</thead>
 
 		<tbody> 
-		<tr ng-repeat="seller in sellers track by $index">
+		<tr ng-repeat="seller in sellers">
 			<td><a ng-href="#/seller/{{seller.id}}">{{seller.name}}</a></td>
 			<td>{{seller.category}}</td>
 		</tr>

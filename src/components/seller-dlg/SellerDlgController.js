@@ -1,9 +1,11 @@
 "use strict";
 
 angular.module("project3App").controller("SellerDlgController",
-function SellerDlgController($scope){
+function SellerDlgController($scope, AppResource, SellerDlg){
 		
+
 	$scope.seller = {
+		id:"",
 		name: "",
 		category: "",
 		imagePath: ""
@@ -21,4 +23,5 @@ function SellerDlgController($scope){
 	$scope.onCancel = function onCancel() {
 		$scope.$dismiss();
 	};
-});
+}
+);
