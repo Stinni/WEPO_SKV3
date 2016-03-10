@@ -42,6 +42,7 @@ function AppResource() {
 		createSeller(3, "Sælgætisgerð Sjonna og Súsí", "Matvörur", "http://i.imgur.com/IuL474x.jpg"),
 		createSeller(4, "Leirkeraverkstæði Lomma", "Keramik", "https://upload.wikimedia.org/wikipedia/commons/6/67/Potter_at_work,_Jaura,_India.jpg")
 	];
+	var nextID = 5;
 
 	var mockProducts = [
 		createProduct(1,  1, "Ullarvettlingar",  1899, 500, 12, "http://i.imgur.com/MZOmRnH.jpg"),
@@ -111,6 +112,7 @@ function AppResource() {
 
 		addSeller: function addSeller(seller) {
 			if (mockResource.successAddSeller) {
+				seller.id = nextID++;
 				mockSellers.push(seller);
 			}
 			return mockHttpPromise(mockResource.successAddSeller, seller);
@@ -128,7 +130,7 @@ function AppResource() {
 			return mockHttpPromise(mockResource.successUpdateSeller, seller);
 		},
 
-		getSellerDetails: function(id) {
+		getSellerDetails: function (id) {
 			var seller;
 			for (var i = 0; i < mockSellers.length; ++i) {
 				if (mockSellers[i].id === id) {
@@ -136,10 +138,9 @@ function AppResource() {
 					break;
 				}
 			}
-
 			if (seller) {
 				return mockHttpPromise(mockResource.successLoadSellerDetails, seller);
-			} else {
+			} else {console.log("else");
 				return mockHttpPromise(false, null);
 			}
 		},

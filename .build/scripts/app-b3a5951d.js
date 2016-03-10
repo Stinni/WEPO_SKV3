@@ -1,26 +1,35 @@
 "use strict";
 
-angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices"])
+angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", /*"pascalprecht.translate"*/])
 .config(function ($routeProvider) {
-	$routeProvider.when("/", {
-		controller: "SellersController",
-		templateUrl: "components/sellers/index.html"
+	$routeProvider
+	.when("/home", {
+		templateUrl: "components/sellers/index.html",
+		controller: "SellersController"
+	})
+	.when("/seller/:sid", {
+		templateUrl: "components/seller-details/sellersdetails.html",
+		controller: "SellersDetailsController"
+	})
+	.otherwise({
+		redirectTo: "/home"
 	});
-	//$translateProvider.use('is');
+	//$translateProvider.use("is");
 });
 
 "use strict";
 
 angular.module("sharedServices", ["toastr"]);
 "use strict";
-/*
-angular.module("project3App").controller("LanguageController", ["$scope", "$translateProvider",
+
+angular.module("project3App").controller("LanguageController", ["$scope", "$translateProvider", "pascalprecht.translate",
 function LanguageController($scope,$translateProvider) {
 
 	$scope.switchLanguage = function (languageKey) {
+		console.log("sfd");
 		$translateProvider.use(languageKey);
 	};
-}]);*/
+}]);
 "use strict";
 
 /**
@@ -65,6 +74,7 @@ function AppResource() {
 		createSeller(3, "Sælgætisgerð Sjonna og Súsí", "Matvörur", "http://i.imgur.com/IuL474x.jpg"),
 		createSeller(4, "Leirkeraverkstæði Lomma", "Keramik", "https://upload.wikimedia.org/wikipedia/commons/6/67/Potter_at_work,_Jaura,_India.jpg")
 	];
+	var nextID = 5;
 
 	var mockProducts = [
 		createProduct(1,  1, "Ullarvettlingar",  1899, 500, 12, "http://i.imgur.com/MZOmRnH.jpg"),
@@ -134,6 +144,7 @@ function AppResource() {
 
 		addSeller: function addSeller(seller) {
 			if (mockResource.successAddSeller) {
+				seller.id = nextID++;
 				mockSellers.push(seller);
 			}
 			return mockHttpPromise(mockResource.successAddSeller, seller);
@@ -151,7 +162,7 @@ function AppResource() {
 			return mockHttpPromise(mockResource.successUpdateSeller, seller);
 		},
 
-		getSellerDetails: function(id) {
+		getSellerDetails: function (id) {
 			var seller;
 			for (var i = 0; i < mockSellers.length; ++i) {
 				if (mockSellers[i].id === id) {
@@ -159,10 +170,9 @@ function AppResource() {
 					break;
 				}
 			}
-
 			if (seller) {
 				return mockHttpPromise(mockResource.successLoadSellerDetails, seller);
-			} else {
+			} else {console.log("else");
 				return mockHttpPromise(false, null);
 			}
 		},
@@ -200,6 +210,26 @@ function AppResource() {
 
 	return mockResource;
 });
+"use strict";
+
+angular.module("project3App").controller("SellersDetailsController",["$scope", "$routeParams","AppResource",/*"$translateProvider", "pascalprecht.translate",*/
+function SellersDetailsController($scope, $routeParams, AppResource) {
+	
+		var sellerid = parseInt($routeParams.sid); 
+/*
+		var sel = { 
+		id:"",
+		name: "",
+		category: "",
+		imagePath: ""
+		};
+*/
+		AppResource.getSellerDetails(sellerid).success(function(seller){
+	
+		$scope.seller = seller;
+		});
+			
+	}]);
 "use strict";
 
 angular.module("project3App").factory("SellerDlg",
@@ -255,8 +285,8 @@ function SellersController($scope, AppResource, SellerDlg) {
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller){
 			AppResource.addSeller(seller).success(function(seller){
-				var newSeller = seller;
-				$scope.sellers.push(seller);
+				//var newSeller = seller;
+				//$scope.sellers.push(newSeller);
 			}).error(function() {
 				//centrisNotify.error(sellers.Message.SaveFailed);
 				//TODO

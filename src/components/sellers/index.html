@@ -9,17 +9,17 @@
 		<!--<span translate="sellers.Add"/>-->
 	</button>
 	
-	<table><!--
+	<table>
 		<thead>
 			<tr>
 				<th translate="sellers.Name"></th>
 				<th translate="sellers.Category"></th>
 			</tr>
-		</thead>-->
+		</thead>
 
 		<tbody> 
 		<tr ng-repeat="seller in sellers track by $index">
-			<td>{{seller.name}}</td> 
+			<td><a ng-href="#/seller/{{seller.id}}">{{seller.name}}</a></td>
 			<td>{{seller.category}}</td>
 		</tr>
 		</tbody>
