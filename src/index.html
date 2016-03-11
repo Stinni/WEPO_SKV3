@@ -10,8 +10,6 @@
 	<link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
-
-
 	<div class="wrapper">
 		
 		<div id="myHeader" class="well well-sm">
@@ -24,9 +22,19 @@
 				</div>-->
 		</div>
 
-		<div id="content">
-			<div ng-view></div>
-		</div>
+		<main id="main_content" class="container-fluid">
+			<div class="Main clearfix" ng-view id="content"></div>
+		</main>
+
+		<toaster-container></toaster-container>
+		<!-- inject:vendor:js -->
+		<!-- endinject -->
+
+		<!-- inject:app:js -->
+		<!-- endinject -->
+
+		<!-- inject:templates:js -->
+		<!-- endinject -->
 
 		<div id="myFooter" class="well well-sm footer">
 			<span class="glyphicon glyphicon-copyright-mark"></span>
@@ -34,20 +42,5 @@
 		</div>
 	</div>
 
-	<!--<main class="container-fluid">
-		<div class="Main clearfix" ng-view id="content"></div>
-	</main>-->
-
-
-	<toaster-container></toaster-container>
-	<!-- inject:vendor:js -->
-	<!-- endinject -->
-
-	<!-- inject:app:js -->
-	<!-- endinject -->
-
-	<!-- inject:templates:js -->
-	<!-- endinject -->
 </body>
-
 </html>
