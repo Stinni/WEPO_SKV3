@@ -6,7 +6,7 @@
   ],
   "main": "src/app.js",
   "license": "MIT",
-  "homepage": "https://github.com/Stinni/WEPO_SKV2",
+  "homepage": "https://github.com/Stinni/WEPO_SKV3",
   "ignore": [
     "**/.*",
     "node_modules",
