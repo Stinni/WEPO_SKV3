@@ -1,10 +1,11 @@
 {
-  "name": "wepo-assignment-3",
+  "name": "WEPO-Assignment3",
+  "description": "WEPO Online Web Store assignment",
   "version": "1.0.0",
   "authors": [
     "Daníel Sigurgeirsson <danielbsig@gmail.com> & Stinni <kristinnf13@ru.is> & Sturla <sturlah13@ru.is>"
   ],
-  "main": "src/app.js",
+  "main": "index.html",
   "license": "MIT",
   "homepage": "https://github.com/Stinni/WEPO_SKV3",
   "ignore": [
@@ -14,6 +15,7 @@
     "test",
     "tests"
   ],
+  "private": true,
   "dependencies": {
     "angular": "~1.5.0",
     "bootstrap": "~3.3.6",
