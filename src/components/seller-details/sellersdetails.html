@@ -1,9 +1,21 @@
 <html>
 	<body>
 		<img src="{{seller.imagePath}}">
-		<ul style="list-style-type:none">
-			<li>{{seller.name}}<li>
-			<li>{{seller.category}}<li>
-		</ul>
+  		<ul style="list-style-type:none">
+  			<li>{{seller.name}}<li>
+  			<li>{{seller.category}}<li>
+  		</ul>
+
+    <div ng-controller="ProductController">
+
+      <button class="btn btn-default" ng-click="onAddProduct()">add product
+        
+        <!--<span translate="sellers.Add"/>-->
+      </button>
+  
+      <product-card ng-repeat = "p in products"
+        ng-model="p">
+      </product-card>
+    </div>
 	</body>
 </html>

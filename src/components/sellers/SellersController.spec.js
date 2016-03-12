@@ -1,5 +1,35 @@
 "use strict";
 
-describe("SellersController should be unit tested here", function() {
-	// TODO: add beforeEach/describe/it/etc. functions as appropriate!
+describe("SellersController", function(AppResource) {
+	
+	beforeEach(function(){	
+		});
+	
+	it("should not accept nonexisting user", function(){
+		var username = "Ragnar";
+
+		var result = AppResource.upDateSeller(1);
+
+		expect(result).toEqual(false);
+	});
+
 });
+
+
+
+/*
+	it("should be ...", function(){
+
+	});
+
+	it("should be ...", function(){
+
+	});
+	
+	it("should be ...", function(){
+
+	});
+	
+	it("should be ...", function(){
+
+	});*/
