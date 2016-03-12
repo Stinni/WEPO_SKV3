@@ -5,5 +5,14 @@
 			<li>{{seller.name}}<li>
 			<li>{{seller.category}}<li>
 		</ul>
+
+		<div>
+</div>
+
+<div ng-controller="ProductController">
+  <product-card ng-repeat = "p in products"
+    ng-model="p">
+  </product-card>
+</div>
 	</body>
 </html>

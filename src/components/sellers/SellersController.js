@@ -12,8 +12,6 @@ function SellersController($scope, AppResource, SellerDlg) {
 	//	$scope.isLoading = false;
 	});
 
-	
-
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller){
 			AppResource.getSellers().success(function(sellers){
