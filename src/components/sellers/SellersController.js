@@ -34,7 +34,6 @@ function SellersController($scope, AppResource, SellerDlg) {
 						//TODO
 						});
 					}
-			
 			});
 		});	
 	};
