@@ -2,18 +2,18 @@
 
 angular.module("project3App").controller("ProductDlgController",
 function ProductDlgController($scope, AppResource, ProductDlg){
-		$scope.product = {
+	/*var product = {
 		id: "",
 			product: {
 				id: "",
 				name: "",
 				price: "",
-				quantitySold: "",
-				quantityInStock: "",
+				quantitySold: 0,
+				quantityInStock: 0,
 				imagePath: ""
 			}
 		};
-
+*/
 	$scope.onOk = function onOk(){
 	/*	if($scope.seller.name.length === 0) {
 				//error message
