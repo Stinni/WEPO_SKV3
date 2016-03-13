@@ -1,7 +1,10 @@
 {
-	"sellerdetails" : {
-		"Title":                     "Sellers List",
-		"Name":                      "Name",
+	"sellersdetails" : {
+		"Seller":                    "Seller",
+		"Category":                  "Category",
+		"Top10":					"Top 10",
+		"Products":					"Products",
+		"addupdate":				"add/update",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",

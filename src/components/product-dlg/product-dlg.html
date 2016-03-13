@@ -1,10 +1,9 @@
-<p>For new product fill in the form<p>
-<p>To update product enter its name<p>
+<h3><span translate="product-dgl.new"/></h3>
+<h3><span translate="product-dgl.add"/></h3>
 
-Name: <input type="text" ng-model="product.name" autofocus></br>
-Price: <input type="text" ng-model="product.price"></br>
-Image link: <input type="text" ng-model="product.imagePath"></br>
+<h4><span translate="product-dgl.Product"/></h4> <input type="text" ng-model="product.name" autofocus></br>
+<h4><span translate="product-dgl.Price"/></h4> <input type="text" ng-model="product.price"></br>
+<h4><span translate="product-dgl.Image"/></h4> <input type="text" ng-model="product.imagePath"></br>
 
-<button class="btn btn-default" ng-click="onOk()">add/update product</button>
-<button class="btn btn-default" ng-click="onCancel()">cancel</button>
-
+<button class="btn btn-default" ng-click="onOk()"><span translate="product-dgl.addupdate"/></button>
+<button class="btn btn-default" ng-click="onCancel()"><span translate="product-dgl.cancel"/></button>

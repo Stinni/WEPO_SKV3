@@ -1,0 +1,16 @@
+{
+	"seller-dgl" : {
+		"cancel":					"cancel",
+		"addupdate":				"add / update",
+		"new":						"For new seller fill in the form",
+		"add":						"To update seller enter his name",
+		"seller":					"Seller",
+		"category":						"Category",
+		"Image":					"Image link",
+		"Messages" : {
+			"LoadFailed":			"Failed to load the list of sellers",
+			"SaveSucceeded":		"The seller has been added successfully",
+			"SaveFailed":			"Unfortunately we could not add a new seller"
+		}
+	}
+}

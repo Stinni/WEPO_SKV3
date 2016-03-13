@@ -1,7 +1,10 @@
 {
 	"sellersdetails" : {
-		"Title":                     "Seljendur",
-		"Name":                      "Nafn",
+		"Seller":                     "Sölumaður",
+		"Category":                   "Flokkur",
+		"Top10":					"Topp 10",
+		"Products":					"Vörur",
+		"addupdate":				"bæta við/uppfæra",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",

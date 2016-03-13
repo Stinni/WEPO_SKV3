@@ -1,22 +1,28 @@
 
 <img class="imgSeller" src="{{seller.imagePath}}" align="left">
-  <ul class="list-unstyled">
-      <li><h3>Nafn: {{seller.name}}</h3><li>
-      <li><h4>Flokkur: {{seller.category}}</h4><li>
-  </ul>
+  
+  <table>
+    <tr>
+      <td><h5><span translate="sellersdetails.Seller"/></h5> </td> 
+      <td><h4>{{seller.name}}</h4></td>
+    </tr>
+    <tr>
+      <td><h5><span translate="sellersdetails.Category"/></h5></td>
+      <td><h4>{{seller.category}}</h4></td>
+    </tr>
+  </table>
+
 
 
 <div ng-controller="ProductController" >
-  <button class="btn btn-default pull-right" ng-click="onAddProduct()">add/update product
-        
-        <!--<span translate="sellers.Add"/>-->
+  <button class="btn btn-default pull-right" ng-click="onAddProduct()"><span translate="sellersdetails.addupdate">
   </button>
 
   <div class="tab-position">
     <div class="container">
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href data-target="#prod" ng-click="onAllProduct()">Products</a></li>
-        <li><a data-toggle="tab" href data-target="#top" ng-click="onTopProduct()">Top 10</a></li>
+        <li class="active"><a data-toggle="tab" href data-target="#prod" ng-click="onAllProduct()"><span translate="sellersdetails.Products"></a></li>
+        <li><a data-toggle="tab" href data-target="#top" ng-click="onTopProduct()"><span translate="sellersdetails.Top10"></a></li>
       </ul>   
 
       <div class="tab-content">
