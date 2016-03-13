@@ -2,6 +2,7 @@
 
 angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pascalprecht.translate", "ngCookies"])
 .config(["$routeProvider", "$translateProvider", function ($routeProvider, $translateProvider) {
+
 	$routeProvider
 	.when("/home", {
 		templateUrl: "components/sellers/index.html",
@@ -22,3 +23,4 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 	$translateProvider.useLocalStorage();
 	$translateProvider.useSanitizeValueStrategy('escape');
 }]);
+

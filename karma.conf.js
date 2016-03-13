@@ -19,6 +19,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'src/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js'
       'src/vendor/jquery/dist/jquery.js',
       'src/vendor/angular/angular.js',
       'src/vendor/angular-route/angular-route.js',

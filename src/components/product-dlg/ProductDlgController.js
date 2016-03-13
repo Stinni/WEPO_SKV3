@@ -2,7 +2,7 @@
 
 angular.module("project3App").controller("ProductDlgController",
 function ProductDlgController($scope, AppResource, ProductDlg){
-	/*var product = {
+/*	var product = {
 		id: "",
 			product: {
 				id: "",

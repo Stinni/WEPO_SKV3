@@ -17,3 +17,4 @@ function LanguageController($scope, $translate) {
 		$scope.status.isopen = !$scope.status.isopen;
 	};
 }]);
+

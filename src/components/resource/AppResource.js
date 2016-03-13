@@ -185,7 +185,6 @@ function AppResource() {
 				}
 			}	
 		}
-//				console.log("ret", product);
 			return mockHttpPromise(mockResource.successUpdateProduct, product);
 		},
 	};
