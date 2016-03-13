@@ -1,7 +1,7 @@
 "use strict";
 
-angular.module("project3App").controller("SellersController",
-function SellersController($scope, AppResource, SellerDlg) {
+angular.module("project3App").controller("SellersController", ["$scope", "AppResource", "SellerDlg", "centrisNotify",
+function SellersController($scope, AppResource, SellerDlg, centrisNotify) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 
@@ -25,16 +25,15 @@ function SellersController($scope, AppResource, SellerDlg) {
 					}
 				}
 				if(seller_found === false){
-					 
-						AppResource.addSeller(seller).success(function(seller){
-						//var newSeller = seller;
-						//$scope.sellers.push(newSeller);
-						}).error(function() {
-						//centrisNotify.error(sellers.Message.SaveFailed);
-						//TODO
-						});
-					}
+					AppResource.addSeller(seller).success(function(seller){
+					//var newSeller = seller;
+					//$scope.sellers.push(newSeller);
+						centrisNotify.success("sellers.Messages.SaveSucceeded");
+					}).error(function() {
+						centrisNotify.error("sellers.Messages.SaveFailed");
+					});
+				}
 			});
 		});	
 	};
-});
+}]);
