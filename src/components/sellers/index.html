@@ -5,16 +5,14 @@
 
 	<div class="col-xs-12" ng-hide="isLoading">
 		<div class="btn-group top_btn_group" role="group">
-			<button class="btn btn-default pull-right" ng-click="onAddSeller()">add/update seller
-				<!--<span translate="sellers.Add"/>-->
-			</button>
+			<button class="btn btn-default pull-right" ng-click="onAddSeller()"><span translate="sellers.AddUser"/></button>
 		</div>
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
-					<tr table-sort="Name">
-						<th class="first_col" data-columnName="Name"><span title="Sort by name" translate="sellers.Name" /></th>
-						<th class="second_col" data-columnName="Category"><span title="Sort by category" translate="sellers.Category" /></th>
+					<tr table-sort="name">
+						<th class="first_col" data-columnName="name"><span title="Sort by name" translate="sellers.Name" /></th>
+						<th class="second_col" data-columnName="category"><span title="Sort by category" translate="sellers.Category" /></th>
 						<th></th>
 					</tr>
 				</thead>

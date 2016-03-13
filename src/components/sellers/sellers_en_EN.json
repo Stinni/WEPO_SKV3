@@ -3,7 +3,7 @@
 		"Title":					"Sellers List",
 		"Name":						"Name",
 		"Category":					"Category",
-		"AddUser":					"Add new user",
+		"AddUser":					"Add new seller",
 		"Messages" : {
 			"LoadFailed":			"Failed to load the list of sellers",
 			"SaveSucceeded":		"The seller has been added successfully",
