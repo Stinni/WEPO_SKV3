@@ -1,12 +1,13 @@
 {
 	"sellers" : {
-		"Title":                     "Sellers List",
-		"Name":                      "Name",
-		"Category":					 "Category",
+		"Title":					"Sellers List",
+		"Name":						"Name",
+		"Category":					"Category",
+		"AddUser":					"Add new user",
 		"Messages" : {
-			"LoadFailed":            "Failed to load the list of sellers",
-			"SaveSucceeded":         "The seller has been added successfully",
-			"SaveFailed":            "Unfortunately we could not add a new seller"
+			"LoadFailed":			"Failed to load the list of sellers",
+			"SaveSucceeded":		"The seller has been added successfully",
+			"SaveFailed":			"Unfortunately we could not add a new seller"
 		}
 	}
 }

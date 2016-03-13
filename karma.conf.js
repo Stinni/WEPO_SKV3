@@ -17,7 +17,6 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
     // list of files / patterns to load in the browser
     files: [
       'src/vendor/jquery/dist/jquery.js',
@@ -26,6 +25,8 @@ module.exports = function(config) {
       'src/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
       'src/vendor/angular-toastr/dist/angular-toastr.js',
       'src/vendor/angular-translate/angular-translate.js',
+      //'src/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+      //'src/vendor/angular-translate-storage-local/angular-translate-storage-local.js',
       'src/vendor/angular-mocks/angular-mocks.js',
       'src/shared/app.js',
       'src/shared/**/*.js',
@@ -33,12 +34,10 @@ module.exports = function(config) {
       'src/components/**/*.js'
     ],
 
-
     // list of files to exclude
     exclude: [
       
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -84,6 +83,5 @@ module.exports = function(config) {
       type : 'html',
       dir : 'coverage/'
     }
-
   });
 };
