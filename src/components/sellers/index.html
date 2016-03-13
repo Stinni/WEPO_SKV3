@@ -9,6 +9,7 @@
 		<!--<span translate="sellers.Add"/>-->
 	</button>
 	
+
 	<table>
 		<thead>
 			<tr>
@@ -20,8 +21,13 @@
 		<tbody> 
 		<tr ng-repeat="seller in sellers">
 			<td><a ng-href="#/seller/{{seller.id}}">{{seller.name}}</a></td>
+			    
 			<td>{{seller.category}}</td>
 		</tr>
 		</tbody>
+		</div>
+    </div>
+</div>
+
 	</table>
 <!--</div>-->

@@ -1,7 +1,7 @@
 "use strict";
 
-angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", /*"pascalprecht.translate"*/])
-.config(function ($routeProvider) {
+angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices","pascalprecht.translate"])
+.config(function ($routeProvider, $translateProvider) { 
 	$routeProvider
 	.when("/home", {
 		templateUrl: "components/sellers/index.html",
@@ -14,5 +14,6 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", /*"p
 	.otherwise({
 		redirectTo: "/home"
 	});
-	//$translateProvider.use("is");
+
+	$translateProvider.use('is');
 });
