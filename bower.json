@@ -1,12 +1,13 @@
 {
-  "name": "wepo-assignment-3",
+  "name": "WEPO-Assignment3",
+  "description": "WEPO Online Web Store assignment",
   "version": "1.0.0",
   "authors": [
     "Daníel Sigurgeirsson <danielbsig@gmail.com> & Stinni <kristinnf13@ru.is> & Sturla <sturlah13@ru.is>"
   ],
-  "main": "src/app.js",
+  "main": "index.html",
   "license": "MIT",
-  "homepage": "https://github.com/Stinni/WEPO_SKV2",
+  "homepage": "https://github.com/Stinni/WEPO_SKV3",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,12 +15,18 @@
     "test",
     "tests"
   ],
+  "private": true,
   "dependencies": {
     "angular": "~1.5.0",
     "bootstrap": "~3.3.6",
     "angular-route": "~1.5.0",
     "angular-bootstrap": "~1.2.1",
     "angular-translate": "~2.10.0",
+    "angular-translate-loader-static-files": "^2.10.0",
+    "angular-translate-loader-url": "^2.10.0",
+    "angular-cookies": "^1.5.0",
+    "angular-translate-storage-cookie": "^2.10.0",
+    "angular-translate-storage-local": "^2.10.0",
     "angular-toastr": "~1.7.0",
     "angular-mocks": "~1.5.0",
     "lodash": "~4.5.1",

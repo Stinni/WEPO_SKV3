@@ -1,3 +1,5 @@
+@bg-color: #006666;
+
 html,
 body {
 	margin:0;
@@ -9,7 +11,7 @@ body {
 	position:relative;
 }
 #myHeader {
-	background-color: #008080;
+	background-color: @bg-color;
 	color: white;
 	padding: 14px;
 	margin-bottom: 0px;
@@ -20,7 +22,7 @@ body {
 }
 #myFooter {
 	width: 100%;
-	background-color: #008080;
+	background-color: @bg-color;
 	color: white;
 	height:40px;
 	position:absolute;
@@ -29,11 +31,36 @@ body {
 }
 
 .imgSeller {
-	max-width: 300px;
-	max-height: 300px
+	margin-top: 20px;
+	max-width: 400px;
+	max-height: 400px
 }
 
-.imgProduct {
-	max-width: 100px;
-	max-height: 100px
+.box{
+     position: relative;
+     float:left;
+     z-index: 0;
+     width: 200px;
+     height: 199px;
+     margin: 5px;
+     margin-top: 5px;
+     margin-left: 5px;	
+     overflow: hidden;
+	 border-style: solid;
+	 border-width: 2px;
+	 text-align: center;
+ }
+
+#box-img {     
+	position: relative;
+    height: auto; 
+    width: auto; 
+    max-width: 300px;
+    max-height: 145px;
+    top: 0px;
+		        
+}
+
+.tab-position{
+	clear:both; 
 }

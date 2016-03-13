@@ -1,21 +1,40 @@
-<html>
-	<body>
-		<img src="{{seller.imagePath}}" class="imgSeller">
-  		<ul style="list-style-type:none">
-  			<li>{{seller.name}}<li>
-  			<li>{{seller.category}}<li>
-  		</ul>
 
-    <div ng-controller="ProductController">
+<img class="imgSeller" src="{{seller.imagePath}}" align="left">
+  <ul class="list-unstyled">
+      <li><h3>Nafn: {{seller.name}}</h3><li>
+      <li><h4>Flokkur: {{seller.category}}</h4><li>
+  </ul>
 
-      <button class="btn btn-default" ng-click="onAddProduct()">add product
+
+<div ng-controller="ProductController" >
+  <button class="btn btn-default pull-right" ng-click="onAddProduct()">add/update product
         
         <!--<span translate="sellers.Add"/>-->
-      </button>
-  
-      <product-card ng-repeat = "p in products"
-        ng-model="p">
-      </product-card>
-    </div>
-	</body>
-</html>
+  </button>
+
+  <div class="tab-position">
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href data-target="#prod" ng-click="onAllProduct()">Products</a></li>
+        <li><a data-toggle="tab" href data-target="#top" ng-click="onTopProduct()">Top 10</a></li>
+      </ul>   
+
+      <div class="tab-content">
+        <div id="prod" class="tab-pane fade in active">
+           <product-card ng-repeat = "p in products"
+           ng-model="p">
+          </product-card>
+        </div>
+
+      <div id="top" class="tab-pane fade">
+        <product-card ng-repeat = "p in products"
+          ng-model="p">
+          </product-card>
+        </div>
+      </div>    
+    </div>    
+  </div>
+</div>
+
+   
+

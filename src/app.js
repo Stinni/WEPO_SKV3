@@ -1,7 +1,8 @@
 "use strict";
 
-angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices","pascalprecht.translate"])
-.config(function ($routeProvider, $translateProvider) { 
+angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pascalprecht.translate", "ngCookies"])
+.config(["$routeProvider", "$translateProvider", function ($routeProvider, $translateProvider) {
+
 	$routeProvider
 	.when("/home", {
 		templateUrl: "components/sellers/index.html",
@@ -15,5 +16,11 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices","pasc
 		redirectTo: "/home"
 	});
 
-	$translateProvider.use('is');
-});
+	$translateProvider.useStaticFilesLoader({
+		prefix: "lang_",
+		suffix: ".json"
+	}).preferredLanguage("is");
+	$translateProvider.useLocalStorage();
+	$translateProvider.useSanitizeValueStrategy('escape');
+}]);
+

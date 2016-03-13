@@ -11,12 +11,12 @@
 </head>
 <body>
 	<div class="wrapper">
-		
 		<div id="myHeader" class="well well-sm">
+
 			<h1 style="margin-left: 20px;">Angular Online Web Store<small></small></h1>
 
-				
 				<div class="btn-group">
+
 			  		<ul ng-controller="LanguageController">
 			  		  <button ng-click="switchLanguage('en')">English</button>
 			  		  <button ng-click="switchLanguage('is')">íslenska</button>
@@ -26,9 +26,11 @@
 
 		</div>
 
-		<div id="content">
-			<div ng-view></div>
-		</div>
+		<main id="main_content" class="container-fluid">
+			<div class="Main clearfix" ng-view id="content"></div>
+		</main>
+
+		<toaster-container></toaster-container>
 
 		<div id="myFooter" class="well well-sm footer">
 			<span class="glyphicon glyphicon-copyright-mark"></span>
@@ -36,20 +38,14 @@
 		</div>
 	</div>
 
-	<!--<main class="container-fluid">
-		<div class="Main clearfix" ng-view id="content"></div>
-	</main>-->
+		<!-- inject:vendor:js -->
+		<!-- endinject -->
 
+		<!-- inject:app:js -->
+		<!-- endinject -->
 
-	<toaster-container></toaster-container>
-	<!-- inject:vendor:js -->
-	<!-- endinject -->
+		<!-- inject:templates:js -->
+		<!-- endinject -->
 
-	<!-- inject:app:js -->
-	<!-- endinject -->
-
-	<!-- inject:templates:js -->
-	<!-- endinject -->
 </body>
-
 </html>

@@ -8,6 +8,4 @@ function SellersDetailsController($scope, $routeParams, AppResource) {
 	AppResource.getSellerDetails(sellerid).success(function(seller){
 		$scope.seller = seller;
 	});
-
-			
-	}]);
+}]);
