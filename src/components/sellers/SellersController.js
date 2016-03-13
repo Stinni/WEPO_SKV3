@@ -2,38 +2,49 @@
 
 angular.module("project3App").controller("SellersController", ["$scope", "AppResource", "SellerDlg", "centrisNotify",
 function SellersController($scope, AppResource, SellerDlg, centrisNotify) {
-	// TODO: load data from AppResource! Also, add other methods, such as to
-	// add/update sellers etc.
 
-	//$scope.isLoading = true;
-	AppResource.getSellers().success(function(sellers){
+	$scope.isLoading = true;
+	AppResource.getSellers().success(function(sellers) {
 		$scope.sellers = sellers;
-	//}).error(function(){
-	//	$scope.isLoading = false;
+		$scope.isLoading = false;
+	}).error(function() {
+		$scope.isLoading = true;
+		centrisNotify.error("sellers.Messages.LoadFailed");
 	});
 
 	$scope.onAddSeller = function onAddSeller() {
-		SellerDlg.show().then(function(seller){
+		SellerDlg.show().then(function(seller) {
 			AppResource.getSellers().success(function(sellers){
 				var seller_found = false;
 				for (var i = 0; i < sellers.length; i++) {
-					if(sellers[i].name === seller.name){
-						AppResource.updateSeller(sellers[i].id, seller).success(function(seller){
-					
-						});
-							seller_found = true;
+					if(sellers[i].name === seller.name) {
+						seller_found = true;
 					}
 				}
-				if(seller_found === false){
-					AppResource.addSeller(seller).success(function(seller){
-					//var newSeller = seller;
-					//$scope.sellers.push(newSeller);
+				if(!seller_found) {
+					AppResource.addSeller(seller).success(function() {
 						centrisNotify.success("sellers.Messages.SaveSucceeded");
 					}).error(function() {
 						centrisNotify.error("sellers.Messages.SaveFailed");
 					});
+				} else {
+					AppResource.updateSeller(sellers[i].id, seller).success(function() {
+						centrisNotify.success("sellers.Messages.UpdateSucceeded");
+					}).error(function() {
+						centrisNotify.error("sellers.Messages.UpdateFailed");
+					});
 				}
 			});
-		});	
+		});
+	};
+
+	$scope.onEditSeller = function onEditSeller(id) {
+		SellerDlg.show().then(function(seller) {
+			AppResource.updateSeller(id, seller).success(function() {
+				centrisNotify.success("sellers.Messages.UpdateSucceeded");
+			}).error(function() {
+				centrisNotify.error("sellers.Messages.UpdateFailed");
+			});
+		});
 	};
 }]);

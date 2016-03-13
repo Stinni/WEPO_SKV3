@@ -21,7 +21,7 @@
 					<tr ng-repeat="seller in sellers | orderBy:predicate:reverse">
 						<td><a ng-href="#/seller/{{seller.id}}">{{seller.name}}</a></td>
 						<td>{{seller.category}}</td>
-						<td>(edit)</td>
+						<td><button class="btn btn-link" ng-click="onEditSeller(seller.id)"><span translate="sellers.Edit"/></button></td>
 					</tr>
 				</tbody>
 			</table>

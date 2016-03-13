@@ -2,7 +2,6 @@
 
 angular.module("project3App").controller("SellerDlgController",
 function SellerDlgController($scope, AppResource, SellerDlg){
-		
 
 	$scope.seller = {
 		id:"",
@@ -17,7 +16,6 @@ function SellerDlgController($scope, AppResource, SellerDlg){
 			return;
 		}*/
 		$scope.$close($scope.seller);
-		
 	};
 
 	$scope.onCancel = function onCancel() {
