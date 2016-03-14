@@ -19,16 +19,20 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js'
-      'src/vendor/jquery/dist/jquery.js',
       'src/vendor/angular/angular.js',
+      'src/vendor/jquery/dist/jquery.js',
       'src/vendor/angular-route/angular-route.js',
       'src/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
-      'src/vendor/angular-toastr/dist/angular-toastr.js',
       'src/vendor/angular-translate/angular-translate.js',
-      //'src/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
-      //'src/vendor/angular-translate-storage-local/angular-translate-storage-local.js',
+      'src/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+      'src/vendor/angular-translate-loader-url/angular-translate-loader-url.js',
+      'src/vendor/angular-cookies/angular-cookies.js',
+      'src/vendor/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
+      'src/vendor/angular-translate-storage-local/angular-translate-storage-local.js',
+      'src/vendor/angular-toastr/dist/angular-toastr.js',
       'src/vendor/angular-mocks/angular-mocks.js',
+      'src/vendor/lodash/lodash.js',
+      'src/vendor/bootstrap/dist/js/bootstrap.js',
       'src/shared/app.js',
       'src/shared/**/*.js',
       'src/app.js',

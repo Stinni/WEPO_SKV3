@@ -14,7 +14,7 @@ function SellersController($scope, AppResource, SellerDlg, centrisNotify) {
 
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller) {
-			AppResource.getSellers().success(function(sellers){
+			AppResource.getSellers().success(function(sellers) {
 				var seller_found = false;
 				for (var i = 0; i < sellers.length; i++) {
 					if(sellers[i].name === seller.name) {
@@ -39,7 +39,7 @@ function SellersController($scope, AppResource, SellerDlg, centrisNotify) {
 	};
 
 	$scope.onEditSeller = function onEditSeller(id) {
-		SellerDlg.show().then(function(seller) {
+		SellerDlg.showEdit(id).then(function(seller) {
 			AppResource.updateSeller(id, seller).success(function() {
 				centrisNotify.success("sellers.Messages.UpdateSucceeded");
 			}).error(function() {

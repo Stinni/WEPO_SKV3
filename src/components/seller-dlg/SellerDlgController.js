@@ -1,7 +1,9 @@
 "use strict";
 
-angular.module("project3App").controller("SellerDlgController",
-function SellerDlgController($scope, AppResource, SellerDlg){
+angular.module("project3App").controller("SellerDlgController", ["$scope", "AppResource",
+function SellerDlgController($scope, AppResource){
+
+	console.log("SellerDlgController called");
 
 	$scope.seller = {
 		id:"",
@@ -21,5 +23,4 @@ function SellerDlgController($scope, AppResource, SellerDlg){
 	$scope.onCancel = function onCancel() {
 		$scope.$dismiss();
 	};
-}
-);
+}]);
