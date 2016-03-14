@@ -1,7 +1,7 @@
 {
 	"sellersdetails" : {
-		"Seller":                    "Seller",
-		"Category":                  "Category",
+		"Seller":                    "Seller :",
+		"Category":                  "Category :",
 		"Top10":					"Top 10",
 		"Products":					"Products",
 		"addupdate":				"add/update",

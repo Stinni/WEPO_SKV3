@@ -1,7 +1,7 @@
 {
 	"sellersdetails" : {
-		"Seller":                     "Sölumaður",
-		"Category":                   "Flokkur",
+		"Seller":                     "Seljandi :",
+		"Category":                   "Flokkur :",
 		"Top10":					"Topp 10",
 		"Products":					"Vörur",
 		"addupdate":				"bæta við/uppfæra",
