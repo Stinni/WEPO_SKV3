@@ -6,7 +6,6 @@
 		"AddUser":					"Add new seller",
 		"Edit":						"edit",
 		"Messages" : {
-			"LoadFailed":			"Failed to load the list of sellers",
 			"SaveSucceeded":		"The seller has been added successfully",
 			"SaveFailed":			"Unfortunately we could not add a new seller",
 			"UpdateSucceeded":		"The seller has been updated successfully",

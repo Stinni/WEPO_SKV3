@@ -5,16 +5,13 @@ function SellersController($scope, AppResource, SellerDlg, centrisNotify) {
 
 	$scope.isLoading = true;
 	$scope.displayError = false;
-	$scope.errorMessage = "";
 	AppResource.getSellers().success(function(sellers) {
 		$scope.sellers = sellers;
 		$scope.isLoading = false;
 		$scope.displayError = false;
-		$scope.errorMessage = "";
 	}).error(function() {
 		$scope.isLoading = false;
 		$scope.displayError = true;
-		$scope.errorMessage = "Unfortunately the loading of the list of sellers failed, please try again later";
 		centrisNotify.error("sellers.Messages.LoadFailed");
 	});
 

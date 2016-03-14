@@ -1,6 +1,10 @@
 {
 	"AppTitle":				"Angular Online Web Store",
-	"index" : {
-		"MenuBtn":					"Menu"
+	"shared" : {
+		"MenuBtn":					"Menu",
+		"Messages" : {
+			"Loading":				"Loading...",
+			"LoadFailed":			"Unfortunately the list of sellers failed to load"
+		}
 	}
 }

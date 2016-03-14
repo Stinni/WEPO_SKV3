@@ -1,6 +1,10 @@
 {
 	"AppTitle":				"Angular Vefverslun",
-	"index" : {
-		"MenuBtn":					"Valmynd"
+	"shared" : {
+		"MenuBtn":					"Valmynd",
+		"Messages" : {
+			"Loading":				"Hleð niður gögnum...",
+			"LoadFailed":			"Ekki tókst að sækja lista yfir seljendur"
+		}
 	}
 }

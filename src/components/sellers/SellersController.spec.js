@@ -56,6 +56,10 @@ describe("SellersController", function() {
 		it("should have the onEditSeller function", function() {
 			expect(scope.onEditSeller).toBeDefined();
 		});
+
+//		it("should be able to add a new seller", function() {
+//			scope.onAddSeller();
+//		});
 	});
 
 	describe("when everything fails or returns false", function() {

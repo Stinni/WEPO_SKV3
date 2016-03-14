@@ -1,11 +1,16 @@
-<div class="row">
-	<div class="col-xs-12" ng-show="isLoading"></div>
-	<loading-message></loading-message>
+<div class="row" ng-show="isLoading">
+	<div class="col-xs-12">
+		<loading-message></loading-message>
+	</div>
+</div>
+<div class="row" ng-show="displayError">
+	<div class="col-xs-12">
+		<error-message></error-message>
+	</div>
 </div>
 
-
-<div ng-hide="isLoading">
-	<div class="col-xs-12" ng-hide="isLoading">
+<div class="row" ng-hide="isLoading || displayError">
+	<div class="col-xs-12">
 		<div class="btn-group top_btn_group" role="group">
 			<button class="btn btn-default pull-right" ng-click="onAddSeller()"><span translate="sellers.AddUser"/></button>
 		</div>
@@ -23,11 +28,10 @@
 					<tr ng-repeat="seller in sellers | orderBy:predicate:reverse">
 						<td><a ng-href="#/seller/{{seller.id}}">{{seller.name}}</a></td>
 						<td>{{seller.category}}</td>
-						<td><button class="btn btn-link" ng-click="onEditSeller(seller.id)"><span translate="sellers.Edit"/></button></td>
+						<td><button class="btn btn-link" ng-click="onEditSeller(seller.id)">({{"sellers.Edit" | translate}})</button></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
 </div>
-
