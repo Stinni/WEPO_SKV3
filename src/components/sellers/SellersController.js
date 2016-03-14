@@ -4,17 +4,23 @@ angular.module("project3App").controller("SellersController", ["$scope", "AppRes
 function SellersController($scope, AppResource, SellerDlg, centrisNotify) {
 
 	$scope.isLoading = true;
+	$scope.displayError = false;
+	$scope.errorMessage = "";
 	AppResource.getSellers().success(function(sellers) {
 		$scope.sellers = sellers;
 		$scope.isLoading = false;
+		$scope.displayError = false;
+		$scope.errorMessage = "";
 	}).error(function() {
-		$scope.isLoading = true;
+		$scope.isLoading = false;
+		$scope.displayError = true;
+		$scope.errorMessage = "Unfortunately the loading of the list of sellers failed, please try again later";
 		centrisNotify.error("sellers.Messages.LoadFailed");
 	});
 
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller) {
-			AppResource.getSellers().success(function(sellers){
+			AppResource.getSellers().success(function(sellers) {
 				var seller_found = false;
 				for (var i = 0; i < sellers.length; i++) {
 					if(sellers[i].name === seller.name) {
@@ -39,7 +45,7 @@ function SellersController($scope, AppResource, SellerDlg, centrisNotify) {
 	};
 
 	$scope.onEditSeller = function onEditSeller(id) {
-		SellerDlg.show().then(function(seller) {
+		SellerDlg.showEdit(id).then(function(seller) {
 			AppResource.updateSeller(id, seller).success(function() {
 				centrisNotify.success("sellers.Messages.UpdateSucceeded");
 			}).error(function() {
