@@ -22,9 +22,7 @@ function ProductController($scope, $routeParams, AppResource, ProductDlg){
 
 		$scope.onAllProduct = function onAllProduct(){
 			AppResource.getSellerProducts(sellerid).success (function(products){
-		
-			$scope.products = products;
-
+				$scope.products = products;
 			});
 		};
 
@@ -53,15 +51,9 @@ function ProductController($scope, $routeParams, AppResource, ProductDlg){
 						}).error(function() {
 						//centrisNotify.error(sellers.Message.SaveFailed);
 						//TODO
-						});
-
+					});
 				}
 			});
-
-		});			
+		});
 	};
-
-
-
 });
-

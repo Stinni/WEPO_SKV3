@@ -119,7 +119,7 @@ function AppResource() {
 			return mockHttpPromise(mockResource.successAddSeller, seller);
 		},
 
-		updateSeller: function(id, seller) {
+		updateSeller: function updateSeller(id, seller) {
 			if (mockResource.successUpdateSeller) {
 				var current = _.find(mockSellers, function(o){ return o.id === id;});
 				if (current !== null) {
@@ -131,7 +131,7 @@ function AppResource() {
 			return mockHttpPromise(mockResource.successUpdateSeller, seller);
 		},
 
-		getSellerDetails: function (id) {
+		getSellerDetails: function getSellerDetails(id) {
 			var seller;
 			for (var i = 0; i < mockSellers.length; ++i) {
 				if (mockSellers[i].id === id) {
@@ -174,19 +174,17 @@ function AppResource() {
 			return mockHttpPromise(success, product);
 		},
 
-		updateProduct: function(id, product) {
-			
+		updateProduct: function updateProduct(id, product) {
 			for (var i = 0; i < mockProducts.length; ++i) {
 				if(mockProducts[i].id === id){
 					if(mockProducts[i].product.name === product.name){
-
-					mockProducts[i].product.price = product.price;
-					mockProducts[i].product.imagePath = product.imagePath;	
+						mockProducts[i].product.price = product.price;
+						mockProducts[i].product.imagePath = product.imagePath;
+					}
 				}
-			}	
-		}
+			}
 			return mockHttpPromise(mockResource.successUpdateProduct, product);
-		},
+		}
 	};
 
 	return mockResource;

@@ -9,7 +9,8 @@
 			"SaveSucceeded":		"Nýjum seljanda hefur verið bætt við",
 			"SaveFailed":			"Því miður tókst ekki að bæta við nýjum seljanda",
 			"UpdateSucceeded":		"Seljandinn hefur verið uppfærður",
-			"UpdateFailed":			"Því miður tókst ekki að bæta uppfæra seljandann"
+			"UpdateFailed":			"Því miður tókst ekki að bæta uppfæra seljandann",
+			"CantAddAgain":			"Seljandi með þessu nafni er nú þegar til"
 		}
 	}
 }

@@ -1,6 +1,6 @@
 {
+	"AppTitle":				"Angular Online Web Store",
 	"shared" : {
-		"AppTitle":				"Angular Online Web Store",
 		"MenuBtn":					"Menu",
 		"Messages" : {
 			"Loading":				"Loading...",

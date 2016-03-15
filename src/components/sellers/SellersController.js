@@ -31,11 +31,7 @@ function SellersController($scope, AppResource, SellerDlg, centrisNotify) {
 						centrisNotify.error("sellers.Messages.SaveFailed");
 					});
 				} else {
-					AppResource.updateSeller(sellers[i].id, seller).success(function() {
-						centrisNotify.success("sellers.Messages.UpdateSucceeded");
-					}).error(function() {
-						centrisNotify.error("sellers.Messages.UpdateFailed");
-					});
+					centrisNotify.error("sellers.Messages.CantAddAgain");
 				}
 			});
 		});

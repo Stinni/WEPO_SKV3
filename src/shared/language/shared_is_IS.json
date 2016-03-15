@@ -1,6 +1,6 @@
 {
+	"AppTitle":				"Angular Vefverslun",
 	"shared" : {
-		"AppTitle":				"Angular Vefverslun",
 		"MenuBtn":					"Valmynd",
 		"Messages" : {
 			"Loading":				"Hleð niður gögnum...",
