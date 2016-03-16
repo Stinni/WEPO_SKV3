@@ -1,0 +1,10 @@
+{
+	"product" : {
+		"Messages" : {
+			"SaveSucceeded":		"Nýrri vöru hefur verið bætt við",
+			"SaveFailed":			"Því miður tókst ekki að bæta við nýrri vöru",
+			"UpdateSucceeded":		"Varan hefur verið uppfærð",
+			"UpdateFailed":			"Því miður tókst ekki að bæta uppfæra vöruna"
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"product" : {
+		"Messages" : {
+			"SaveSucceeded":		"The product has been added successfully",
+			"SaveFailed":			"Unfortunately we could not add a new product",
+			"UpdateSucceeded":		"The product has been updated successfully",
+			"UpdateFailed":			"Unfortunately we could not update the product"
+		}
+	}
+}
